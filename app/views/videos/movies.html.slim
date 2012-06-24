@@ -1,0 +1,17 @@
+#movie-board
+  - @all_movies.each do |movie|
+    .movie
+      = link_to(cover_image(movie['thumbnail']), video_details_path({ type: :movie, id: movie['movieid'] }), remote: true)
+
+#details-modal.modal.hide
+  .modal-header
+    button.close data-dismiss="modal" x
+    h3
+  .modal-body
+    .cover-large
+    .details
+      .runtime
+      .plot
+      .genre
+      .director
+      = link_to('Play Movie', '#', class: 'btn btn-primary play', remote: true)

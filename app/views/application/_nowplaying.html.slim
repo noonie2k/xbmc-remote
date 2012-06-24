@@ -1,0 +1,5 @@
+.cover
+  = cover_image(@item_playing['thumbnail'])
+.player
+  = link_to('', video_operation_path({ operation: :playpause, type: :movie, id: @item_playing['movieid'] }), id: 'player-playpause', class: 'pause', remote: true)
+  = link_to('', video_operation_path({ operation: :stop, type: :movie, id: @item_playing['movieid'] }), id: 'player-stop', class: 'stop', remote: true)

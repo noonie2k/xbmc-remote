@@ -1,0 +1,11 @@
+$('#details-modal .modal-header h3').html("<%=j @movie_details['title'] %><small> (<%=j @movie_details['year'].to_s %>)</small>");
+$('#details-modal .modal-body .runtime').html("<strong>Runtime: </strong><%=j @movie_details['runtime'].to_s %> minutes");
+$('#details-modal .modal-body .plot').html("<%=j @movie_details['plot'] %>");
+$('#details-modal .modal-body .genre').html("<strong>Genre: </strong><%=j @movie_details['genre'] %>");
+$('#details-modal .modal-body .director').html("<strong>Director: </strong><%=j @movie_details['director'] %>");
+
+$('#details-modal .modal-body .cover-large').html("<%=j cover_image(@movie_details['thumbnail']) %>");
+
+$('#details-modal .modal-body a.play').attr('href', "<%=j video_open_path({ type: :movie, id: @movie_details['movieid'] }) %>");
+
+$('#details-modal').modal();

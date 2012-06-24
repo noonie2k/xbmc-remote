@@ -1,0 +1,92 @@
+//
+// This is a manifest file that'll be compiled into application.css, which will include all the files
+// listed below.
+//
+// Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+// or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+//
+// You're free to add application-wide styles to this file and they'll appear at the top of the
+// compiled file, but it's generally better to create a new file per style scope.
+//
+//= require_self
+//= require_tree .
+//
+#movie-board {
+  float: left;
+  text-align: center;
+  padding: {
+    bottom: 160px;
+  }
+
+  .movie {
+    float: left;
+    width: 130px;
+    height: 200px;
+    padding: 10px;
+
+    &:hover {
+      cursor: pointer;
+      background: {
+        color: #ccc;
+      }
+    }
+
+    img {
+      float: left;
+      width: 120px;
+      padding: 5px;
+    }
+
+    .title {
+      float: left;
+    }   
+  }
+}
+
+#now-playing {
+  height: 135px;
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  background: {
+    color: #000;
+  }
+
+  .cover {
+    position: fixed;
+    bottom: 10px;
+    img {
+      height: 300px;
+    }
+  }
+
+  .player {
+    float: left;
+    padding: {
+      left: 300px;
+      top: 10px;
+    }
+
+
+    #player-playpause, #player-stop {
+      float: left;
+      background-image: url('media/icons.png');
+      width: 115px;
+      height: 115px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .stop {
+      background-position: -390px -1930px;
+    }
+    .play {
+      background-position: -265px -1930px;
+    }
+    .pause {
+      background-position: -400px -1540px;
+    }
+  }
+}

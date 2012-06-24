@@ -1,0 +1,27 @@
+// Place all the styles related to the videos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#details-modal {
+  .modal-body {
+    float: left;
+
+    .cover-large {
+      img {
+        float: left;
+        width: 180px;
+      }
+    }
+
+    .details {
+      padding: {
+        left: 190px;
+      }
+
+      .runtime, .plot, .genre, .director {
+        margin: {
+          bottom: 10px;
+        }
+      }
+    }
+  }
+}
